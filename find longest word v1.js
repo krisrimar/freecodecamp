@@ -1,15 +1,9 @@
-
 function titleCase(str) {
-  var word, i;
-  str = str.split(' ');
-  for(i = 0; i < str.length; i++) {
-    word = str[i].toLowerCase().split('');
-    word[0] = word[0].toUpperCase();
-    word = word.join('');
-    str[i] = word;
-  }
-  str = str.join(' ');
-  return str;
+  var convertToArray = str.toLowerCase().split(" ");
+  var result = convertToArray.map(function(val){
+      return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+  });
+  return result.join(" ");
 }
 
 titleCase("I'm a little tea pot");
