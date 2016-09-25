@@ -6,3 +6,5 @@ function repeat(str, num) {
     }
     return accumulatedStr;
 }
+
+repeatStringNumTimes("*", 3)
