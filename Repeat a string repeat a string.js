@@ -1,14 +1,8 @@
-function repeatStringNumTimes(str, num) {
-  var i, arr = [];
-  if(num > 0) {
-    for(i = 0; i < num; i++) {
-      arr.push(str);
+function repeat(str, num) {
+    var accumulatedStr = "";
+    while (num > 0) {
+        accumulatedStr += str;
+        num--;
     }
-    return arr.join('');
-  }
-  
-  return "";
-  
+    return accumulatedStr;
 }
-
-repeatStringNumTimes("abc", 3);
